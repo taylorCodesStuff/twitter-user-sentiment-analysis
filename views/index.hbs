@@ -1,0 +1,64 @@
+
+
+
+<h1>{{title}}</h1>
+<p>Welcome to {{title}}</p>
+
+<form class="" action="" method="post">
+  <div>
+    <input name="user_id" placeholder="Enter twitter user ID here" />
+    <button type="submit" id="" name="button">Enter</button>
+  </div>
+</form>
+
+<input id="result" />
+<button id="prediction" placeholder="prediction" name="button"></button>
+
+<!-- {{#each tweets}}
+<li>
+  {{this.text}}
+  <div>
+    <p>
+      {{this.analysis.score}}
+    </p>
+  </div>
+</li>
+{{/each}} -->
+
+<div class ="description">
+            <table>
+          <tr>
+            <td>
+              <select>
+                <option id="item" value="demand">Demand Ride Percent Change</option>
+                <option id="item" value="bus">Bus Ride Percent Change</option>
+              </select>
+            </td>
+        </tr>
+        <tr>
+              <td>
+                <ul>
+                  <li><input type="checkbox" class="checkbox" name="check" value="sort"> </li>
+                  <li>Sort by percent change</li>
+                </ul>
+              </div>
+            </td>
+
+        </tr>
+          </table>
+      </div>
+      <br>
+      <div id="chart-container"></div>
+    </div> <!--description-->
+
+<script type="text/javascript">
+  var tweets = {{{tweets2}}}
+  console.log(tweets);
+
+</script>
+
+<!-- <p>{{tweets}}</p> -->
+<!-- <script src="./js/training-data.js"></script> -->
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
+<script type="text/javascript" src="javascripts/script.js"></script>
