@@ -1,36 +1,41 @@
 
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> Twitter Sentiment Analysis</title>
+  </head>
+  <body>
+
+    <h1>{{title}}</h1>
 
 
-<h1>{{title}}</h1>
-<!-- <p>Welcome to {{title}}</p> -->
+    <form class="style-form" action="" method="post">
+      <div>
+        <input name="user_id" placeholder="Enter twitter user ID here" required/>
+        <button type="submit" id="" name="button">GO!</button>
+      </div>
+    </form>
 
-<form class="style-form" action="" method="post">
-  <div>
-    <input name="user_id" placeholder="Enter twitter user ID here" />
-    <button type="submit" id="" name="button">GO!</button>
-  </div>
-</form>
-
-
-<!-- {{#each tweets}}
-<li>
-  {{this.text}}
-  <div>
-    <p>
-      {{this.analysis.score}}
-    </p>
-  </div>
-</li>
-{{/each}} -->
-
-  <!-- <div class ="description"></div> -->
-      <!-- <br> -->
+    <div class="chart">
       <div id="chart-container"></div>
+    </div>
+
+
+      <div class ="description">
+        {{#each tweets}}
+        <li>
+          {{this.text}}
+          URL HERE ==> {{this.user.url}}
+        </li>
+        {{/each}}
+      </div>
+
 
 
 <script type="text/javascript">
-  var tweets = {{{tweets2}}}
-  console.log(tweets);
+var tweets = {{{tweets2}}}
+console.log(tweets);
 
 </script>
 
@@ -39,3 +44,6 @@
 <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
 <script type="text/javascript" src="javascripts/script.js"></script>
+
+  </body>
+</html>

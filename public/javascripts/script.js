@@ -236,11 +236,4 @@ function barChart(dataset){
 		// 		}
 		// });
 
-
-
-
-
-let dummyData = [{score: 1, text: 'adoifjkdjf'},{score: 5, text: 'sfdjdkrpe'}, {score: -4, text: 'sderher'}];
-
-
 barChart(tweets);
