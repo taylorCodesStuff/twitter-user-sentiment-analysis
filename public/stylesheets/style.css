@@ -22,6 +22,7 @@ h1 {
   padding-bottom: 20px;
   border: 1px solid white;
   border-radius: 2px;
+  max-width: 1200px;
 }
 
 .chart {
@@ -56,6 +57,7 @@ h1 {
   background: white;
   height: 30px;
   text-align: center;
+  max-width: 1200px;
 }
 
 input {
