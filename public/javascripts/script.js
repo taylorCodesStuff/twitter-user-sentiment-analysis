@@ -3,6 +3,21 @@ console.log("client side js");
 console.log(tweets);
 
 
+init();
+
+function init(){
+	toggleTweets();
+	barChart(tweets);
+}
+
+
+function toggleTweets(){
+	$('.tweets-btn').on('click', function(event){
+		$('.tweets').toggleClass('description-display');
+	});
+}
+
+
 //Define bar chart function
 function barChart(dataset){
 
@@ -236,4 +251,4 @@ function barChart(dataset){
 		// 		}
 		// });
 
-barChart(tweets);
+// barChart(tweets);

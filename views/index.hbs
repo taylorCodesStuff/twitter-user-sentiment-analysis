@@ -7,30 +7,45 @@
   </head>
   <body>
 
+    <div class="dropdown">
+      <button class="dropdown-btn">Help</button>
+      <div class="dropdown-content">
+        <p class="desc">
+          How to info.
+        </p>
+      </div>
+    </div>
+
     <h1>{{title}}</h1>
 
 
     <form class="style-form" action="" method="post">
       <div>
         <input name="user_id" placeholder="Enter twitter user ID here" required/>
-        <button type="submit" id="" name="button">GO!</button>
+        <button class="go-btn" type="submit" id="" name="button">GO!</button>
       </div>
     </form>
 
-    <div class="chart">
-      <div id="chart-container"></div>
-    </div>
+<main>
+  <div class="chart">
+    <div id="chart-container"></div>
+  </div>
 
 
-      <div class ="description">
+    <div class ="description">
+      <button class="tweets-btn">Show tweets</button>
+      <div class="tweets description-display">
         {{#each tweets}}
-        <li>
-          <ol>
+        <ul>
+          <li>
             {{this.text}}
-          </ol>
-        </li>
+          </li>
+          <hr />
+        </ul>
         {{/each}}
       </div>
+    </div>
+</main>
 
 
 
