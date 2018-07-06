@@ -8,26 +8,33 @@
   <body>
 
     <div class="dropdown">
-      <button class="dropdown-btn">Help</button>
+      <button class="dropdown-btn">Help?</button>
       <div class="dropdown-content">
         <p class="desc">
           Type in a Twitter users handle to see the sentiment graph of their last 200 tweets.
           For example, try typing "@realDonaldTrump" to see the POTUS's sentiment graph.
           Hover over the individual bar graph to see the individual tweet.
+          On the graph, the most recent tweets are shown left to right.
           You can also click "Show tweets" to show a list of all the tweets analyzed.
           If there seems to be "gaps" in the graph, or a bit of space between each bar, it means the analysis deemed the post "nuetral,"
-          and therefore received a score of 0%. You can hover over the graph where x = 0 to see these tweets. 
+          and therefore received a score of 0%.
           Also, if the bar's are thicker than normal it means the user you typed in has less than 200 tweets.
         </p>
       </div>
     </div>
 
     <h1>{{title}}</h1>
-
+    <i>Explore twitter user's sentiment over time...</i>
+    
+    <h3>Popular users:
+        <a class="popular">@realDonaldTrump</a>
+        <a class="popular">@kanyewest</a>
+        <a class="popular">@BillGates</a>
+    </h3>
 
     <form class="style-form" action="" method="post">
       <div>
-        <input name="user_id" placeholder="Enter twitter user ID here" required/>
+        <input name="user_id" placeholder="Ex: @kanyewest or @BillGates or @Snowden or one of your friends!" required/>
         <button class="go-btn" type="submit" id="" name="button">GO!</button>
       </div>
     </form>
@@ -40,11 +47,14 @@
 
 
     <div class ="description">
-      <button class="tweets-btn">Show tweets</button>
-      <div class="tweets description-display">
+      <button class="tweets-btn" value="Hide tweets">Hide tweets</button>
+      <div class="tweets">
         {{#each tweets}}
         <p>
           {{this.tweet.user.name}}
+          <div>
+            {{this.tweet.created_at}}
+          </div>
         </p>
         <ul>
           <li>

@@ -16,7 +16,7 @@ var client = new Twitter({
 /* GET home page. */
 router.get('/', function(req, res, next) {
 
-  client.get('statuses/user_timeline', {screen_name: req.query.screen_name, count: 500}, function(error, tweets, response) {
+  client.get('statuses/user_timeline', {screen_name: '@realDonaldTrump', count: 500}, function(error, tweets, response) {
      // tweets.statuses.forEach(tweet => {
      //   // console.log(tweet.text, tweet.user.name);
      //   console.log(tweet.user.name);
@@ -30,15 +30,15 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/', function(req, res, next) {
-  console.log(req.body);
+  console.log(req.body, "kiwi");
   var tweets = [];
   client.get('statuses/user_timeline', {screen_name: req.body.user_id, count: 500}, function(error, tweets, response) {
     console.log(error === true, tweets === true, tweets.length);
     if(tweets.error){
       tweets = [];
     }
-    console.log(tweets);
-    console.log('tweets');
+    // console.log(tweets);
+    // console.log('tweets');
      let sentimentalTweets = [];
      tweets.forEach(tweet => {
        sentimentalTweets.push({tweet: tweet, text: tweet.text, analysis: sentiment.analyze(tweet.text)})

@@ -12,7 +12,7 @@ body {
 
 h1 {
   color: white;
-  background: steelblue;
+  /* background: steelblue; */
   line-height: 1.1;
   text-align: center;
   margin: 0;
@@ -20,9 +20,17 @@ h1 {
   text-transform: uppercase;
   padding-top: 20px;
   padding-bottom: 20px;
-  border: 1px solid white;
+  /* border: 1px solid white; */
   border-radius: 2px;
   max-width: 1200px;
+}
+
+i {
+  color: white;
+  padding-bottom: 60px;
+  margin: auto;
+  display: table;
+  font-size: 14px;
 }
 
 .chart {
@@ -111,6 +119,16 @@ input:focus {
   color: steelblue;
 }
 
+h3 {
+  color: white;
+}
+
+a::after {
+  content: ", ";
+}
+
+a:last-child:after { content: ''; }
+
 
 /* ************************************* */
 /* Media Queries */
@@ -192,6 +210,7 @@ header::after {
 
 a {
   color: #00B7FF;
+  cursor: pointer;
 }
 
 .positive{

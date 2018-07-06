@@ -16,6 +16,12 @@ function init(){
 function toggleTweets(){
 	$('.tweets-btn').on('click', function(event){
 		$('.tweets').toggleClass('description-display');
+		let value = $(this).text();
+		if(value === 'Hide tweets'){
+			$(this).text('Show tweets');
+		} else {
+			$(this).text('Hide tweets');
+		}
 	});
 }
 
@@ -33,6 +39,11 @@ function toggleTwitterUser(){
 		$('input').val("");
 	});
 }
+
+$('.popular').on('click', function(event){
+	$('input').val($(this).text());
+	$('form').submit();
+});
 
 
 //Define bar chart function
