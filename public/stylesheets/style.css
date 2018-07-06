@@ -38,7 +38,7 @@ h1 {
 
 #chart-container {
   /* float: left; */
-   background: white;
+  background: white;
   border-radius: 6px;
   border: 2px solid white;
   display: inline-block;
@@ -59,7 +59,6 @@ h1 {
 .description-display {
   display: none;
 }
-
 
 .style-form {
   background: white;
@@ -133,15 +132,14 @@ input:focus {
 /* ************************************* */
 /* Clearfix */
 
-header::before, header::after {
+/* header::before, header::after {
   display: table;
   content: '';
 }
 
 header::after {
   clear: both;
-}
-
+} */
 
 /* ************************************* */
 /* ************************************* */
@@ -163,7 +161,7 @@ header::after {
 }
 
 .dropdown:hover .dropdown-content {
-  display: block;
+  display: inline-block;
 }
 
 .desc {
@@ -177,7 +175,16 @@ header::after {
   border: none;
   padding: 0!important;
   font: inherit;
+}
 
+.tweets-btn {
+  cursor: pointer;
+
+  background: none!important;
+  color: steelblue;
+  border: none;
+  padding: 0!important;
+  font: inherit;
 }
 
 /* ************************************* */

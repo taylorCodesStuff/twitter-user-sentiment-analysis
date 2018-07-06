@@ -27,7 +27,8 @@
     </form>
 
 <main>
-  <div class="chart">
+
+  <div class="chart description">
     <div id="chart-container"></div>
   </div>
 
@@ -36,6 +37,9 @@
       <button class="tweets-btn">Show tweets</button>
       <div class="tweets description-display">
         {{#each tweets}}
+        <p>
+          {{this.tweet.user.name}}
+        </p>
         <ul>
           <li>
             {{this.text}}

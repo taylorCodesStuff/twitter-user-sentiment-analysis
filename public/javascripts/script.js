@@ -8,12 +8,29 @@ init();
 function init(){
 	toggleTweets();
 	barChart(tweets);
+	// handleSubmit();
+	// toggleTwitterUser();
 }
 
 
 function toggleTweets(){
 	$('.tweets-btn').on('click', function(event){
 		$('.tweets').toggleClass('description-display');
+	});
+}
+
+function handleSubmit(){
+	$('form').on('submit', function(event){
+		event.preventDefault();
+		barChart(tweets);
+	});
+}
+
+function toggleTwitterUser(){
+	$('.go-btn').on('click', function(event){
+		event.preventDefault();
+		$('.twitter-user').toggleClass('twitter-user-display');
+		$('input').val("");
 	});
 }
 
