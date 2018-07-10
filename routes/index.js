@@ -25,7 +25,7 @@ router.get('/', function(req, res, next) {
      tweets.forEach(tweet => {
        sentimentalTweets.push({tweet: tweet, text: tweet.text, analysis: sentiment.analyze(tweet.text)})
      });
-     res.render('index', { title: 'Twitter User Sentiment Analysis', tweets: sentimentalTweets, tweets2: JSON.stringify(tweets)});
+     res.render('index', { title: 'Twitter User Sentiment Analysis', tweets: sentimentalTweets, tweets2: JSON.stringify(sentimentalTweets)});
   });
 });
 

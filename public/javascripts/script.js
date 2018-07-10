@@ -7,8 +7,8 @@ init();
 
 function init(){
 	toggleTweets();
+	console.log(tweets);
 	barChart(tweets);
-	// handleSubmit();
 	// toggleTwitterUser();
 }
 
@@ -22,13 +22,6 @@ function toggleTweets(){
 		} else {
 			$(this).text('Hide tweets');
 		}
-	});
-}
-
-function handleSubmit(){
-	$('form').on('submit', function(event){
-		event.preventDefault();
-		barChart(tweets);
 	});
 }
 
@@ -110,11 +103,11 @@ function barChart(dataset){
 			.enter()
 		  	.append("rect")
 		    .attr("class", function(d){
-		    	console.log(d, d.analysis.score, d.text);
+		    	// console.log(d, d.analysis.score, d.text);
 		    	return d.analysis.score < 0 ? "negative" : "positive";})
 		    .attr({
 		    	x: function(d){
-		    		console.log(d);
+		    		// console.log(d);
 		    		return xScale(d.text);
 		    	},
 		    	y: function(d){
